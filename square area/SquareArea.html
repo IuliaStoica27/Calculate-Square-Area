@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Square Area</title>
+	<style type="text/css">
+		body{
+	
+			text-align: center;
+			background-color: #bcbff5;
+		}
+	
+		img{
+			width: 20%;
+			height: auto;
+		}
+
+	</style>
+</head>
+
+<body>
+	<header><h1>Calculate Area of a Square</h1></header>
+	<img src="square.png">
+
+	<p>Enter square's side value:</p>
+    <input type="text"  id="userInput"><br><br>
+    <button type="button" onclick="submit()">Calculate Area</button>
+         
+</body>
+
+<script type="text/javascript">
+
+	function submit(){
+		var userInput = document.getElementById("userInput").value;
+		calculateArea(userInput);
+	}
+
+	function calculateArea(side){
+		
+      if (isNaN(side) || side =="")
+         window.alert("Please enter a number!");
+      else if (side < 0){
+      	window.alert("Please enter a positive value number!");
+      }
+      else{
+      	 var area = side * side;
+          return window.alert("The area of the square is " + area + " .");}
+	}
+
+</script>
+</html>
